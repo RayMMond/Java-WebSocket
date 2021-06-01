@@ -15,6 +15,7 @@
         <!-- Test dependencies versions -->
         <junit.version>4.12</junit.version>
         <org.json.version>20180813</org.json.version>
+        <maven.test.skip>true</maven.test.skip>
 
         <!-- Maven plugin versions -->
         <bnd.maven.plugin.version>4.3.1</bnd.maven.plugin.version>
