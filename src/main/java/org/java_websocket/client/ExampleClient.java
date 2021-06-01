@@ -1,4 +1,4 @@
-/*
+package org.java_websocket.client;/*
  * Copyright (c) 2010-2020 Nathan Rajlich
  *
  *  Permission is hereby granted, free of charge, to any person
@@ -26,6 +26,8 @@
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
+
 import org.java_websocket.client.WebSocketClient;
 import org.java_websocket.drafts.Draft;
 import org.java_websocket.handshake.ServerHandshake;
@@ -78,9 +80,11 @@ public class ExampleClient extends WebSocketClient {
     ExampleClient c = new ExampleClient(new URI(
         "ws://localhost:8887")); // more about drafts here: http://github.com/TooTallNate/Java-WebSocket/wiki/Drafts
     c.connect();
+    c.close(1, "");
 
-    c.connect();
-
+//    c.send();
+//    c.sendPing();
+//    c.onWebsocketPong();
   }
 
 }
